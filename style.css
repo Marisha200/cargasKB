@@ -1,0 +1,112 @@
+:root {
+  --dark-blue: #2d545e;       /* Azul oscuro para fondos, encabezados principales */
+  --medium-blue: #4a6986;     /* Azul medio para texto principal, contenedores */
+  --light-blue: #88a8c0;      /* Azul claro para acentos, enlaces */
+  --very-light-blue: #e0f2f7; /* Azul muy claro para fondos secundarios */
+  --text-color-light: #f8f9fa; /* Texto claro sobre fondos oscuros */
+  --text-color-dark: #333;      /* Texto oscuro sobre fondos claros */
+  --border-color: #6c757d;     /* Gris azulado para bordes */
+}
+
+body {
+  font-family: sans-serif; /* Una fuente legible */
+  background-color: var(--very-light-blue);
+  color: var(--text-color-dark);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--dark-blue);
+  color: var(--text-color-light);
+  padding: 2em;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0.5em;
+}
+
+main {
+  padding: 20px;
+}
+
+#search-container {
+  background-color: var(--medium-blue);
+  padding: 1.5em;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: var(--text-color-light);
+}
+
+#search-input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: var(--text-color-dark);
+}
+
+#results-list {
+  list-style: none;
+  padding: 0;
+}
+
+#results-list li {
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#results-list li:last-child {
+  border-bottom: none;
+}
+
+#results-list li a {
+  color: var(--light-blue);
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+  border-radius: 4px;
+}
+
+#results-list li a:hover {
+  background-color: rgba(var(--light-blue-rgb), 0.1); /* Un ligero efecto al pasar el ratón */
+}
+
+#content-area {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#content-area h2, #content-area h3 {
+  color: var(--dark-blue);
+  margin-top: 1.5em;
+}
+
+#content-area ul, #content-area ol {
+  padding-left: 20px;
+}
+
+#content-area a {
+  color: var(--light-blue);
+  text-decoration: none;
+}
+
+#content-area a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: var(--dark-blue);
+  color: var(--text-color-light);
+  text-align: center;
+  padding: 1em 0;
+  position: fixed; /* O 'static' si no quieres que esté fijo */
+  bottom: 0;
+  width: 100%;
+}
