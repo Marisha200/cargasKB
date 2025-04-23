@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Base Cargas</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <header>
+        <h1>KB</h1>
+    </header>
+
+    <main>
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Buscar temas o palabras clave...">
+            <ul id="results-list"></ul>
+        </div>
+
+        <div id="content-area">
+            <p>Encontrá información útil rápidamente.</p>
+            <ul>
+                <li><a href="Skyteam.html">Skyteam integrado a SmartKargo</a></li>
+                <li><a href="ZebraSO.html">Actualización SO Zebra</a></li>
+                </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; [Tu Nombre/Equipo] - 2025</p>
+    </footer>
+
+    <script src="assets/js/simple-jekyll-search.min.js"></script>
+    <script>
+        window.onload = function() {
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-list'),
+                json: '/search.json', // La ruta al archivo JSON con el índice
+                searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+                noResultsText: 'No se encontraron resultados.'
+            });
+        }
+    </script>
+</body>
+</html>
