@@ -34,16 +34,16 @@
 
     <!-- SOLO este bloque de script -->
     <script>
-        window.onload = function() {
-            SimpleJekyllSearch({
-                searchInput: document.getElementById('search-input'),
-                resultsContainer: document.getElementById('results-list'),
-                json: 'search.json',
-                searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-                noResultsText: 'No se encontraron resultados.',
-                searchFields: ['title', 'content']
-            });
-        };
+       window.onload = function() {
+        SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-list'),
+            json: '/cargasKB/search.json',  <!-- CAMBIO AQUÍ -->
+            searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+            noResultsText: 'No se encontraron resultados.',
+            searchFields: ['title', 'content']
+        });
+    };        
     </script>
 </body>
 </html>
