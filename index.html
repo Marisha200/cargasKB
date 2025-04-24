@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knowledge Base Cargas</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="style.css">
+    <script src="assets/js/simple-jekyll-search.min.js"></script> <!-- Esto va en el head o justo antes del cierre de body -->
+</head>
 <body>
     <header>
         <h1>Cargo Knowledge Base</h1>
@@ -21,7 +23,7 @@
             <ul>
                 <li><a href="Skyteam.html">Skyteam integrado a SmartKargo</a></li>
                 <li><a href="ZebraSO.html">Actualización SO Zebra</a></li>
-                </ul>
+            </ul>
         </div>
     </main>
 
@@ -29,20 +31,18 @@
         <p>&copy; [Tu Nombre/Equipo] - 2025</p>
     </footer>
 
-   <script>
-    window.onload = function() {
-        SimpleJekyllSearch({
-            searchInput: document.getElementById('search-input'),
-            resultsContainer: document.getElementById('results-list'),
-            json: '/search.json',
-            searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-            noResultsText: 'No se encontraron resultados.',
-            searchFields: ['title', 'content'] // <-- ESTA ES LA CLAVE 🔑
-        });
-    }
-</script>
+    <!-- SOLO este bloque de script -->
+    <script>
+        window.onload = function() {
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-list'),
+                json: 'search.json',
+                searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+                noResultsText: 'No se encontraron resultados.',
+                searchFields: ['title', 'content']
             });
-        }
+        };
     </script>
 </body>
 </html>
