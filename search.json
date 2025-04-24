@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Skyteam integrado a SmartKargo",
+    "url": "Skyteam.html",
+    "content": "Este documento describe cómo se integran los procesos de Skyteam en el sistema SmartKargo para la gestión de cargas aéreas..."
+  },
+  {
+    "title": "Actualización SO Zebra",
+    "url": "ZebraSO.html",
+    "content": "Pasos para actualizar el sistema operativo de los dispositivos Zebra utilizados por el equipo de rampa y carga..."
+  }
+]
