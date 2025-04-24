@@ -29,15 +29,18 @@
         <p>&copy; [Tu Nombre/Equipo] - 2025</p>
     </footer>
 
-    <script src="assets/js/simple-jekyll-search.min.js"></script>
-    <script>
-        window.onload = function() {
-            SimpleJekyllSearch({
-                searchInput: document.getElementById('search-input'),
-                resultsContainer: document.getElementById('results-list'),
-                json: 'search.json', // La ruta al archivo JSON con el índice
-                searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-                noResultsText: 'No se encontraron resultados.'
+   <script>
+    window.onload = function() {
+        SimpleJekyllSearch({
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-list'),
+            json: '/search.json',
+            searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+            noResultsText: 'No se encontraron resultados.',
+            searchFields: ['title', 'content'] // <-- ESTA ES LA CLAVE 🔑
+        });
+    }
+</script>
             });
         }
     </script>
